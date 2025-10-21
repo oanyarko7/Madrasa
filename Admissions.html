@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Admissions & Enrollment - Rashidiyah Islamic School</title>
+    <meta name="description" content="Find the step-by-step admissions process, required documentation, and frequently asked questions for enrolling your child at Rashidiyah Islamic School.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Specific style for the FAQ accordion (Simple style) */
+        .faq-item {
+            background: white;
+            margin-bottom: 15px;
+            border-radius: var(--radius);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            border-left: 4px solid var(--accent);
+            overflow: hidden;
+        }
+        .faq-question {
+            padding: 18px 20px;
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--primary);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+            transition: background 0.2s;
+        }
+        .faq-question:hover {
+            background: rgba(4,106,56,0.05); /* Light green hover */
+        }
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+            color: #333;
+        }
+        .faq-item.open .faq-answer {
+            max-height: 200px; /* Adjust as needed for content */
+            padding-bottom: 20px;
+        }
+        .faq-item .arrow {
+            font-size: 1.2rem;
+            transform: rotate(0deg);
+            transition: transform 0.3s;
+        }
+        .faq-item.open .arrow {
+            transform: rotate(45deg);
+            color: var(--accent);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav container">
+            <div class="brand">
+                <img src="school-logo.png" alt="Rashidiyah Islamic School Logo" id="logo" loading="lazy">
+                <a href="index.html">RASHIDIYAH ISLAMIC SCHOOL</a>
+            </div>
+            <nav>
+                <ul id="navList">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active"><a href="Admissions.html">Admissions</a></li> <li><a href="Academics.html">Academics</a></li>
+                    <li><a href="News&Events.html">News & Events</a></li>
+                    <li><a href="Gallery.html">Gallery</a></li>
+                    <li><a href="AboutUs.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <button id="mobileToggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Toggle navigation menu">☰</button>
+        </div>
+        <div id="mobileMenu"></div>
+    </header>
+
+    <main>
+        <section class="hero" style="padding: 60px 0; margin-bottom: 0; background-color: var(--accent); background-image:none;">
+            <div class="container center">
+                <h1 style="font-size: 2.5rem; color:var(--primary);">Admissions & Enrollment</h1>
+                <p style="font-size: 1.1rem; max-width: 800px; color:var(--primary);">Start the journey to a brighter future for your child. Follow our simple, four-step admissions process.</p>
+            </div>
+        </section>
+        
+        <section>
+            <div class="container">
+                <h2 class="section-title">The 4-Step Enrollment Process</h2>
+                <div class="steps-grid">
+                    <div class="step animate-card" style="border-top:4px solid var(--accent);">
+                        <div class="num">1</div>
+                        <h3>Submit Application</h3>
+                        <p>Complete the online application form and pay the non-refundable application fee.</p>
+                    </div>
+                    <div class="step animate-card" style="border-top:4px solid var(--primary); transition-delay:0.1s;">
+                        <div class="num">2</div>
+                        <h3>Assessment & Interview</h3>
+                        <p>The student completes a readiness assessment and an interview with the Head of Admissions.</p>
+                    </div>
+                    <div class="step animate-card" style="border-top:4px solid var(--accent); transition-delay:0.2s;">
+                        <div class="num">3</div>
+                        <h3>Receive Acceptance</h3>
+                        <p>Upon review, an official acceptance letter and enrollment packet are issued.</p>
+                    </div>
+                    <div class="step animate-card" style="border-top:4px solid var(--primary); transition-delay:0.3s;">
+                        <div class="num">4</div>
+                        <h3>Final Registration</h3>
+                        <p>Submit all required documents and pay the initial term fees to finalize registration.</p>
+                    </div>
+                </div>
+                <div class="center" style="margin-top:30px;">
+                    <a href="#" class="btn btn-primary">Download Application Form (PDF)</a>
+                </div>
+            </div>
+        </section>
+
+        <section style="background:var(--bg);">
+            <div class="container grid-2 animate-card">
+                <div>
+                    <h2 style="font-size:1.8rem; color:var(--primary);">Required Documents Checklist</h2>
+                    <p>To successfully finalize registration (Step 4), please ensure you have the following ready:</p>
+                    <ul style="list-style-type:'✓ '; padding-left:20px; line-height:1.8;">
+                        <li>Student's Birth Certificate (Original and Copy)</li>
+                        <li>Two passport-sized photographs of the student</li>
+                        <li>Copy of Parent/Guardian ID (Passport or Driver's License)</li>
+                        <li>Previous School Report Card/Transcript (If applicable)</li>
+                        <li>Health Record/Immunization Card</li>
+                    </ul>
+                </div>
+                <div style="background:white; padding:30px; border-radius:var(--radius); box-shadow:var(--shadow); border-left:5px solid var(--accent);">
+                    <h3 style="margin-top:0; color:var(--primary); font-family:Playfair Display, serif;">Application Deadlines</h3>
+                    <p>Applications for the **[Current Term Name]** term close on **[Date]**. We encourage early submissions as space is limited, particularly in the lower grades.</p>
+                    <p>For mid-year transfers, please contact the admissions office directly.</p>
+                    <a href="contact.html" class="btn" style="margin-top:10px;">Contact Admissions Office</a>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <div style="max-width:800px; margin:0 auto;">
+                    
+                    <div class="faq-item animate-card">
+                        <div class="faq-question">
+                            What age must my child be to enroll in Kindergarten? <span class="arrow">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>For our Kindergarten program, students must be 4 years old by September 1st of the academic year they are applying for.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item animate-card" style="transition-delay:0.1s;">
+                        <div class="faq-question">
+                            Is Financial Aid or Scholarship available? <span class="arrow">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We offer a limited number of need-based scholarships and merit-based tuition discounts. Details and application forms are available upon request from the Admissions Office.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item animate-card" style="transition-delay:0.2s;">
+                        <div class="faq-question">
+                            Does the school follow the national curriculum? <span class="arrow">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, our secular curriculum follows the national standard, but it is integrated with comprehensive Islamic studies, including Qur'an memorization, Fiqh, and Adab.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <script>
+            // Basic JavaScript for FAQ accordion functionality
+            document.querySelectorAll('.faq-question').forEach(button => {
+                button.addEventListener('click', () => {
+                    const faqItem = button.closest('.faq-item');
+                    faqItem.classList.toggle('open');
+                });
+            });
+        </script>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>
+                <a href="AboutUs.html">About Us</a> ·
+                <a href="Admissions.html">Admissions</a> ·
+                <a href="Academics.html">Academics</a> ·
+                <a href="contact.html">Contact Us</a>
+            </p>
+            <p style="margin-top:12px;">&copy; 2024 Rashidiyah Islamic School. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

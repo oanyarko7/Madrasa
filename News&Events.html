@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>News & Events - Rashidiyah Islamic School</title>
+    <meta name="description" content="Stay updated with the latest news, school announcements, community events, and term dates from Rashidiyah Islamic School.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Specific style for the news grid */
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .news-item {
+            background: white;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            overflow: hidden; /* Clips the image */
+            transition: transform 0.3s ease-in-out;
+            border-top: 4px solid var(--accent);
+        }
+        .news-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(4,106,56,0.15);
+        }
+        .news-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .news-content {
+            padding: 20px;
+        }
+        .news-content h3 {
+            color: var(--primary);
+            font-family: Playfair Display, serif;
+            margin-top: 0;
+            font-size: 1.4rem;
+        }
+        .news-content .date {
+            display: block;
+            font-size: 0.85rem;
+            color: var(--muted);
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        .news-sidebar h3 {
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+        }
+        .event-list li {
+            list-style: none;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .event-list li:last-child {
+            border-bottom: none;
+        }
+        .event-list strong {
+            display: block;
+            color: var(--primary);
+            font-size: 1.1rem;
+        }
+        .event-list span {
+            font-size: 0.9rem;
+            color: var(--muted);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav container">
+            <div class="brand">
+                <img src="school-logo.png" alt="Rashidiyah Islamic School Logo" id="logo" loading="lazy">
+                <a href="index.html">RASHIDIYAH ISLAMIC SCHOOL</a>
+            </div>
+            <nav>
+                <ul id="navList">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Admissions.html">Admissions</a></li>
+                    <li><a href="Academics.html">Academics</a></li>
+                    <li class="active"><a href="news.html">News & Events</a></li> <li><a href="Gallery.html">Gallery</a></li>
+                    <li><a href="AboutUs.html">About Us</a></li>
+                    <li><a href="ContactUs.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <button id="mobileToggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Toggle navigation menu">☰</button>
+        </div>
+        <div id="mobileMenu"></div>
+    </header>
+
+    <main>
+        <section style="background:white; padding:40px 0;">
+            <div class="container center">
+                <h1 class="section-title" style="margin-bottom:10px; font-size:2.5rem;">School News & Upcoming Events</h1>
+                <p class="muted" style="font-size:1.1rem;">Keeping our community connected and informed.</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="container" style="display:grid; grid-template-columns: 1fr 300px; gap: 40px;">
+                
+                <div>
+                    <h2 style="color:var(--primary); font-family: Playfair Display, serif; margin-top: 0; border-bottom: 2px solid #eee; padding-bottom: 10px;">Latest News</h2>
+                    <div class="news-grid">
+                        
+                        <a href="#" class="news-item animate-card">
+                            <img src="news-hifz.jpg" alt="Hifz completion ceremony" loading="lazy">
+                            <div class="news-content">
+                                <span class="date">October 15, 2024</span>
+                                <h3>Five Students Complete Hifz Program</h3>
+                                <p>We are delighted to announce that five dedicated students have successfully memorized the Holy Qur'an this term. Masha'Allah!</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="news-item animate-card" style="transition-delay:0.1s;">
+                            <img src="news-science-fair.jpg" alt="Students at a science fair" loading="lazy">
+                            <div class="news-content">
+                                <span class="date">September 28, 2024</span>
+                                <h3>Annual Science Fair Winners Announced</h3>
+                                <p>Our intermediate students showcased incredible innovation at this year's science fair. See the winning projects.</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="news-item animate-card" style="transition-delay:0.2s;">
+                            <img src="news-admissions.jpg" alt="School entrance" loading="lazy">
+                            <div class="news-content">
+                                <span class="date">September 10, 2024</span>
+                                <h3>Admissions Now Open for Spring Term</h3>
+                                <p>Applications for the upcoming Spring term are now being accepted. Apply early to secure your spot.</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="news-item animate-card" style="transition-delay:0.3s;">
+                            <img src="news-sports.jpg" alt="Students playing sports" loading="lazy">
+                            <div class="news-content">
+                                <span class="date">August 25, 2024</span>
+                                <h3>Rashidiyah Wins Regional Debate Competition</h3>
+                                <p>Our debate team brought home the trophy after a stunning performance in the Regional Islamic School Debate.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="news-sidebar">
+                    <div class="card" style="border-top-color:var(--primary); background:white;">
+                        <h3 style="color:var(--primary); font-family: Playfair Display, serif; margin-top: 0;">Upcoming Events</h3>
+                        <ul class="event-list" style="padding:0; margin:0;">
+                            <li>
+                                <strong>Parent-Teacher Interviews</strong>
+                                <span>Nov 10 | 9:00 AM - 3:00 PM</span>
+                            </li>
+                            <li>
+                                <strong>Annual Field Trip (Museum)</strong>
+                                <span>Nov 25 | All Day</span>
+                            </li>
+                            <li>
+                                <strong>End-of-Term Holiday</strong>
+                                <span>Dec 15 - Jan 5</span>
+                            </li>
+                            <li>
+                                <strong>New Student Orientation</strong>
+                                <span>Jan 6, 2025 | 10:00 AM</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="center" style="margin-top:30px;">
+                        <a href="ContactUs.html" class="btn btn-primary">Subscribe for Email Updates</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>
+                <a href="AboutUs.html">About Us</a> ·
+                <a href="Admissions.html">Admissions</a> ·
+                <a href="Academics.html">Academics</a> ·
+                <a href="ContactUs.html">Contact Us</a>
+            </p>
+            <p style="margin-top:12px;">&copy; 2024 Rashidiyah Islamic School. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

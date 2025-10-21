@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Gallery - Photos & Videos - Rashidiyah Islamic School</title>
+    <meta name="description" content="View photos and videos from school events, classroom activities, sports, and Islamic gatherings at Rashidiyah Islamic School.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Specific style for the gallery grid */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px 0;
+        }
+        .gallery-item {
+            background: white;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease-in-out;
+            border-top: 4px solid var(--accent);
+        }
+        /* Uses the animate-card class for visibility but overrides the transition and shadow for a lighter feel */
+        .gallery-item.animate-card {
+            transform: translateY(20px);
+            opacity: 0;
+            transition: all 0.5s ease-in-out;
+        }
+        .gallery-item.is-visible {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        .gallery-item:hover {
+            transform: scale(1.02);
+            box-shadow: var(--shadow); /* Use the primary green shadow on hover */
+        }
+        .gallery-item a {
+            display: block;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+        .caption {
+            padding: 15px;
+            text-align: center;
+            font-weight: 600;
+            color: var(--primary);
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav container">
+            <div class="brand">
+                <img src="school-logo.png" alt="Rashidiyah Islamic School Logo" id="logo" loading="lazy">
+                <a href="index.html">RASHIDIYAH ISLAMIC SCHOOL</a>
+            </div>
+            <nav>
+                <ul id="navList">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Admissions.html">Admissions</a></li>
+                    <li><a href="Academics.html">Academics</a></li>
+                    <li><a href="News&Events.html">News & Events</a></li>
+                    <li class="active"><a href="Gallery.html">Gallery</a></li> 
+                    <li><a href="AboutUs.html">About Us</a></li>
+                    <li><a href="ContactUs.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <button id="mobileToggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Toggle navigation menu">☰</button>
+        </div>
+        <div id="mobileMenu"></div>
+    </header>
+
+    <main>
+        <section style="background:white; padding:40px 0;">
+            <div class="container center">
+                <h1 class="section-title" style="margin-bottom:10px; font-size:2.5rem;">School Gallery</h1>
+                <p class="muted" style="font-size:1.1rem;">A look into life at Rashidiyah: Nurturing faith and inspiring minds in action.</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <h2 class="section-title" style="font-size:1.8rem;">Latest Activities</h2>
+                
+                <div class="gallery-grid">
+                    
+                    <div class="gallery-item animate-card">
+                        <a href="#" target="_blank">
+                            <img src="gallery-classroom-hifz.jpg" alt="Students reciting Quran in class" loading="lazy">
+                            <div class="caption">Hifz Class Recitation</div>
+                        </a>
+                    </div>
+
+                    <div class="gallery-item animate-card" style="transition-delay:0.1s;">
+                        <a href="#" target="_blank">
+                            <img src="gallery-science-lab.jpg" alt="Students conducting experiment in lab" loading="lazy">
+                            <div class="caption">Intermediate Science Lab</div>
+                        </a>
+                    </div>
+
+                    <div class="gallery-item animate-card" style="transition-delay:0.2s;">
+                        <a href="#" target="_blank">
+                            <img src="gallery-sports-day.jpg" alt="Students running on sports day" loading="lazy">
+                            <div class="caption">Annual Sports Day</div>
+                        </a>
+                    </div>
+
+                    <div class="gallery-item animate-card" style="transition-delay:0.3s;">
+                        <a href="#" target="_blank">
+                            <img src="gallery-graduation.jpg" alt="Graduation ceremony" loading="lazy">
+                            <div class="caption">Year-End Graduation</div>
+                        </a>
+                    </div>
+
+                    <div class="gallery-item animate-card" style="transition-delay:0.4s;">
+                        <a href="#" target="_blank">
+                            <img src="gallery-community-service.jpg" alt="Students volunteering" loading="lazy">
+                            <div class="caption">Community Cleanup Project</div>
+                        </a>
+                    </div>
+
+                    <div class="gallery-item animate-card" style="transition-delay:0.5s;">
+                        <a href="#" target="_blank">
+                            <img src="gallery-teacher.jpg" alt="Teacher helping student" loading="lazy">
+                            <div class="caption">Dedicated Mentorship</div>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        
+        <section style="background:var(--bg);">
+            <div class="container center animate-card">
+                <h2 class="section-title">School Overview Video</h2>
+                <div style="max-width:800px; margin:0 auto; padding-bottom:20px;">
+                    <iframe 
+                        width="100%" 
+                        height="450" 
+                        src="http://youtube.com/embed/placeholder" 
+                        title="School Overview Video" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen 
+                        style="border-radius:var(--radius); box-shadow:var(--shadow);">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>
+                <a href="AboutUs.html">About Us</a> ·
+                <a href="Admissions.html">Admissions</a> ·
+                <a href="Academics.html">Academics</a> ·
+                <a href="ContactUs.html">Contact Us</a>
+            </p>
+            <p style="margin-top:12px;">&copy; 2024 Rashidiyah Islamic School. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

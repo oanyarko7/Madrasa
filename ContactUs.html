@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Contact Us - Rashidiyah Islamic School</title>
+    <meta name="description" content="Contact the administration of Rashidiyah Islamic School. Find our address, phone number, email, and location map.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Specific style for contact details */
+        .contact-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .contact-card {
+            background: white;
+            padding: 25px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            border-left: 5px solid var(--primary);
+            transition: all 0.3s ease-in-out;
+        }
+        .contact-card h3 {
+            color: var(--accent);
+            margin-top: 0;
+            font-family: Inter, sans-serif;
+            font-size: 1.25rem;
+        }
+        .contact-card p a {
+            color: var(--primary);
+            text-decoration: underline;
+        }
+        .map-container {
+            height: 400px; /* Set a specific height for the map iframe */
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            margin-bottom: 40px;
+        }
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav container">
+            <div class="brand">
+                <img src="school-logo.png" alt="Rashidiyah Islamic School Logo" id="logo" loading="lazy">
+                <a href="index.html">RASHIDIYAH ISLAMIC SCHOOL</a>
+            </div>
+            <nav>
+                <ul id="navList">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Admissions.html">Admissions</a></li>
+                    <li><a href="Academics.html">Academics</a></li>
+                    <li><a href="News&Events.html">News & Events</a></li>
+                    <li><a href="Gallery.html">Gallery</a></li>
+                    <li><a href="AboutUs.html">About Us</a></li>
+                    <li class="active"><a href="ContactUs.html">Contact Us</a></li> </ul>
+            </nav>
+            <button id="mobileToggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Toggle navigation menu">☰</button>
+        </div>
+        <div id="mobileMenu"></div>
+    </header>
+
+    <main>
+        <section style="background:var(--primary); padding:60px 0;">
+            <div class="container center">
+                <h1 style="font-size: 2.5rem; color:white; margin-bottom:10px;">Get in Touch</h1>
+                <p style="font-size: 1.1rem; max-width: 700px; color:rgba(255,255,255,0.8);">We're here to answer your questions about enrollment, curriculum, and school life.</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="container center">
+                <h2 class="section-title" style="margin-bottom:20px;">Administrative Information</h2>
+                
+                <div class="contact-details">
+                    <div class="contact-card animate-card">
+                        <h3>School Address</h3>
+                        <p class="muted">
+                            Rashidiyah Islamic School Main Campus<br>
+                            P.O. BOX 123, Central District, City Name<br>
+                            [Insert Specific Landmark Here]
+                        </p>
+                        <a href="#" style="color:var(--accent); font-weight:600; text-decoration:none;">Get Directions &rarr;</a>
+                    </div>
+
+                    <div class="contact-card animate-card" style="transition-delay:0.1s;">
+                        <h3>Phone & Email</h3>
+                        <p>
+                            **Administration Office:**<br>
+                            Phone: <a href="tel:+1234567890">+1 234 567 890</a>
+                        </p>
+                        <p style="margin-top:10px;">
+                            **General Inquiries:**<br>
+                            Email: <a href="mailto:info@rashidiyahschool.org">info@rashidiyahschool.org</a>
+                        </p>
+                    </div>
+
+                    <div class="contact-card animate-card" style="transition-delay:0.2s;">
+                        <h3>Office Hours</h3>
+                        <p>
+                            **Monday to Friday:**<br>
+                            8:00 AM – 4:00 PM
+                        </p>
+                        <p style="margin-top:10px;">
+                            **Visitor Policy:**<br>
+                            Please schedule an appointment for meetings with administration or staff.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section style="background:var(--bg);">
+            <div class="container">
+                <h2 class="section-title">Send Us a Message</h2>
+                <div style="max-width:700px; margin:0 auto;" class="animate-card">
+                    <form action="#" method="POST" style="background:white; padding:30px; border-radius:var(--radius); box-shadow:var(--shadow);">
+                        <div style="margin-bottom:15px;">
+                            <label for="name" style="display:block; margin-bottom:5px; font-weight:600;">Full Name</label>
+                            <input type="text" id="name" name="name" required style="width:100%; padding:10px; border:1px solid #ccc; border-radius:6px;">
+                        </div>
+                        <div style="margin-bottom:15px;">
+                            <label for="email" style="display:block; margin-bottom:5px; font-weight:600;">Email Address</label>
+                            <input type="email" id="email" name="email" required style="width:100%; padding:10px; border:1px solid #ccc; border-radius:6px;">
+                        </div>
+                        <div style="margin-bottom:15px;">
+                            <label for="subject" style="display:block; margin-bottom:5px; font-weight:600;">Subject</label>
+                            <select id="subject" name="subject" required style="width:100%; padding:10px; border:1px solid #ccc; border-radius:6px;">
+                                <option value="" disabled selected>Select Inquiry Type</option>
+                                <option value="Admissions">Admissions & Enrollment</option>
+                                <option value="Academics">Curriculum & Academics</option>
+                                <option value="General">General Question</option>
+                                <option value="Staff">Staff Contact</option>
+                            </select>
+                        </div>
+                        <div style="margin-bottom:20px;">
+                            <label for="message" style="display:block; margin-bottom:5px; font-weight:600;">Your Message</label>
+                            <textarea id="message" name="message" rows="5" required style="width:100%; padding:10px; border:1px solid #ccc; border-radius:6px;"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width:100%; padding:12px;">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section style="padding-top:20px; padding-bottom:40px;">
+            <div class="container">
+                <h2 class="section-title">Find Our School</h2>
+                <div class="map-container animate-card">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15383.743956637305!2d-0.1837095!3d5.60273765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf9a7e6d6b05e5%3A0x6a2c2e0b5d5d5a2d!2sAccra%2C%20Ghana!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+                <a href ="AboutUs.html">About Us</a> ·
+                <a href="Admissions.html">Admissions</a> ·
+                <a href="Academics.html">Academics</a> ·
+                <a href="ContactUs.html">Contact Us</a>
+            </p>
+            <p style="margin-top:12px;">&copy; 2024 Rashidiyah Islamic School. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
